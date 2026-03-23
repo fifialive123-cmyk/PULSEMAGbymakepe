@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PULSE Magazine - Entertainment</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .ent-section {
+      padding: 50px 0;
+    }
+
+    /* VIDEO INTERVIEW CARD */
+    .video-card {
+      background-color: var(--mid-blue);
+      border: 1px solid var(--light-blue);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .video-card-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .video-thumbnail {
+      position: relative;
+      background-color: var(--dark-blue);
+    }
+
+    .video-thumbnail img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      opacity: 0.8;
+    }
+
+    .play-badge {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--gold);
+      color: var(--dark-blue);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 3px;
+      letter-spacing: 1px;
+    }
+
+    .video-card-body {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .video-card-body h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .video-card-body p {
+      color: var(--gray);
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    /* IMAGE GALLERY */
+    .gallery-section {
+      padding: 50px 0;
+      background-color: var(--mid-blue);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 4px;
+      border: 1px solid var(--light-blue);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .gallery-item p {
+      padding: 8px 10px;
+      font-size: 0.8rem;
+      color: var(--gray);
+      background-color: var(--dark-blue);
+    }
+
+    /* INTERVIEW CARDS GRID */
+    .interviews-section {
+      padding: 50px 0;
+    }
+
+    @media (max-width: 700px) {
+      .video-card-inner {
+        grid-template-columns: 1fr;
+      }
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">PULSE<span>MAG</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="feature.html">Feature Stories</a></li>
+          <li><a href="entertainment.html" class="active">Entertainment</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li><a href="team.html">Editorial Team</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE BANNER -->
+  <div class="page-banner">
+    <div class="container">
+      <h1>Entertainment</h1>
+      <p>Movies, music, interviews, and the stories behind the stars</p>
+    </div>
+  </div>
+
+<!-- VIDEO INTERVIEWS SECTION -->
+<section class="ent-section">
+  <div class="container">
+    <h2 class="section-title">Video Interviews</h2>
+
+    <div class="video-card">
+      <div class="video-card-inner">
+        
+        <div class="video-thumbnail">
+          <video controls width="100%">
+            <source src="videos/v1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <span class="play-badge">▶ Watch Interview</span>
+        </div>
+
+        <div class="video-card-body">
+          <span class="card-category">Interview</span>
+          <h3>Inside the Studio: A Conversation With Producer DJ Maphorisa</h3>
+          <p>
+            We sat down with award-winning music producer DJ Maphorisa to talk 
+            about his creative process, working with African artists, and what 
+            the future of sound looks like.
+          </p>
+          <div class="card-meta">March 12, 2026 &nbsp;|&nbsp; 18 min</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ARTICLE LIST: TOP FILMS -->
+  <section class="interviews-section">
+    <div class="container">
+      <h2 class="section-title">Article List: Top Films This Season</h2>
+      <div class="grid-3">
+        <div class="card">
+          <img src="images/e1.jpg" alt="Film 1" />
+          <div class="card-body">
+            <span class="card-category">Film</span>
+            <h3><a href="#">The Long Walk — A Documentary on Migration</a></h3>
+            <p>An intimate look at families crossing borders in search of safety and opportunity.</p>
+            <div class="card-meta">Drama &nbsp;|&nbsp; 2025</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/e2.jpg" alt="Film 2" />
+          <div class="card-body">
+            <span class="card-category">Music</span>
+            <h3><a href="#">Rhythms of the South — Concert Film</a></h3>
+            <p>A celebration of Southern African musical heritage filmed across five countries.</p>
+            <div class="card-meta">Concert &nbsp;|&nbsp; 2026</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/e3.jpg" alt="Film 3" />
+          <div class="card-body">
+            <span class="card-category">Film</span>
+            <h3><a href="#">Code Red — Africa's First Cyberpunk Thriller</a></h3>
+            <p>A high-octane story of hackers, corporations, and the fight for digital freedom.</p>
+            <div class="card-meta">Thriller &nbsp;|&nbsp; 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Ordered list: recommended -->
+      <h2 class="section-title">Editors' Top Picks — Ordered List</h2>
+      <ol style="padding-left: 25px; color: var(--text-light); line-height: 2.2; font-size: 1rem;">
+        <li>The Long Walk — Documentary</li>
+        <li>Rhythms of the South — Concert Film</li>
+        <li>Code Red — Cyberpunk Thriller</li>
+        <li>Mama Africa — Biographical Drama</li>
+        <li>Tomorrow's Children — Animation</li>
+      </ol>
+
+      <hr class="divider" />
+
+      <!-- Unordered list: genres -->
+      <h2 class="section-title">Browse by Genre</h2>
+      <ul style="padding-left: 25px; color: var(--text-light); line-height: 2.2; font-size: 1rem; list-style: disc;">
+        <li>Drama</li>
+        <li>Documentary</li>
+        <li>Music &amp; Concert</li>
+        <li>Thriller &amp; Action</li>
+        <li>Animation &amp; Family</li>
+        <li>Comedy</li>
+      </ul>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="feature.html">Feature Stories</a>
+        <a href="entertainment.html">Entertainment</a>
+        <a href="multimedia.html">Multimedia</a>
+        <a href="team.html">Editorial Team</a>
+      </div>
+      <p>&copy; 2026 Pulse Magazine. All rights reserved. | Limkokwing University of Creative Technology</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PULSE Magazine - Multimedia</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .media-section {
+      padding: 50px 0;
+    }
+
+    /* EMBEDDED VIDEO BLOCK */
+    .embed-block {
+      background-color: var(--mid-blue);
+      border: 1px solid var(--light-blue);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .embed-block .embed-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: var(--dark-blue);
+    }
+
+    .embed-block .embed-video iframe,
+    .embed-block .embed-video video {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .embed-info {
+      padding: 20px 25px;
+    }
+
+    .embed-info h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .embed-info p {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    /* AUDIO SECTION */
+    .audio-block {
+      background-color: var(--mid-blue);
+      border: 1px solid var(--light-blue);
+      border-radius: 6px;
+      padding: 25px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .audio-icon {
+      font-size: 2.5rem;
+      min-width: 60px;
+      text-align: center;
+    }
+
+    .audio-details {
+      flex: 1;
+    }
+
+    .audio-details h4 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .audio-details p {
+      color: var(--gray);
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+
+    audio {
+      width: 100%;
+      accent-color: var(--gold);
+    }
+
+    /* PHOTO ESSAY */
+    .photo-essay {
+      padding: 50px 0;
+      background-color: var(--mid-blue);
+    }
+
+    .photo-essay-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .photo-essay-item {
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--light-blue);
+    }
+
+    .photo-essay-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .photo-essay-item .caption {
+      padding: 12px 15px;
+      font-size: 0.85rem;
+      color: var(--gray);
+      background-color: var(--dark-blue);
+    }
+
+    .photo-essay-item .caption strong {
+      display: block;
+      color: var(--text-light);
+      margin-bottom: 3px;
+    }
+
+    @media (max-width: 700px) {
+      .photo-essay-grid {
+        grid-template-columns: 1fr;
+      }
+      .audio-block {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">PULSE<span>MAG</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="feature.html">Feature Stories</a></li>
+          <li><a href="entertainment.html">Entertainment</a></li>
+          <li><a href="multimedia.html" class="active">Multimedia</a></li>
+          <li><a href="team.html">Editorial Team</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE BANNER -->
+  <div class="page-banner">
+    <div class="container">
+      <h1>Multimedia</h1>
+      <p>Videos, podcasts, photo essays, and more</p>
+    </div>
+  </div>
+
+  <!-- VIDEO SECTION -->
+  <section class="media-section">
+    <div class="container">
+      <h2 class="section-title">Video Reports</h2>
+
+      <div class="embed-block">
+        <div class="embed-video">
+          <!-- Embedded YouTube video (public, no login required) -->
+          <iframe
+            src="videos/en1.mp4"
+            title="Pulse Magazine Video Report"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="embed-info">
+          <span class="card-category">Video Report</span>
+          <h3>Inside the World of African Street Fashion</h3>
+          <p>Our reporters hit the streets of Maseru, Johannesburg, and Nairobi to capture the vibrant fashion culture shaping a new generation of style icons.</p>
+          <div class="card-meta">March 10, 2026 &nbsp;|&nbsp; 12 min</div>
+        </div>
+      </div>
+
+        
+    </div>
+  </section>
+
+  <!-- AUDIO / PODCAST SECTION -->
+  <section class="media-section" style="background-color: var(--dark-blue); padding: 50px 0;">
+    <div class="container">
+      <h2 class="section-title">Audio &amp; Podcast Episodes</h2>
+
+      <div class="audio-block">
+        <div class="audio-icon">🎙️</div>
+        <div class="audio-details">
+          <h4>Episode 12: The Future of Media in Africa</h4>
+          <p>Our editors discuss how digital platforms are reshaping journalism and storytelling across the continent. | 34 min</p>
+          <audio controls>
+            <source src="videos/audio1.weba" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+
+      <div class="audio-block">
+        <div class="audio-icon">🎧</div>
+        <div class="audio-details">
+          <h4>Episode 11: Young Entrepreneurs — Building Without Borders</h4>
+          <p>Three young founders from Lesotho, Zimbabwe, and Kenya share their startup journeys. | 28 min</p>
+          <audio controls>
+            <source src="videos/audio2.m4a" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PHOTO ESSAY -->
+  <section class="photo-essay">
+    <div class="container">
+      <h2 class="section-title">Photo Essay: Faces of the City</h2>
+      <p style="color: var(--gray); margin-bottom: 5px;">A visual story captured across urban Lesotho — people, places, and moments that define everyday life.</p>
+      <div class="photo-essay-grid">
+        <div class="photo-essay-item">
+          <img src="images/en1.jpg" alt="City Life" />
+          <div class="caption">
+            <strong>The Market at Dawn</strong>
+            Vendors prepare before the morning rush at the central market.
+          </div>
+        </div>
+        <div class="photo-essay-item">
+          <img src="images/en2.jpg" alt="People" />
+          <div class="caption">
+            <strong>Portraits of Resilience</strong>
+            Everyday faces reflecting strength and community spirit.
+          </div>
+        </div>
+        <div class="photo-essay-item">
+          <img src="images/en3.jpg" alt="Architecture" />
+          <div class="caption">
+            <strong>Urban Architecture</strong>
+            Old buildings stand beside new construction in the growing city.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="feature.html">Feature Stories</a>
+        <a href="entertainment.html">Entertainment</a>
+        <a href="multimedia.html">Multimedia</a>
+        <a href="team.html">Editorial Team</a>
+      </div>
+      <p>&copy; 2026 Pulse Magazine. All rights reserved. | Limkokwing University of Creative Technology</p>
+    </div>
+  </footer>
+
+</body>
+</html>

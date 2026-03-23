@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PULSE Magazine - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* --- HERO SECTION --- */
+    .hero {
+      background: linear-gradient(135deg, var(--mid-blue) 0%, var(--dark-blue) 100%);
+      border-bottom: 3px solid var(--gold);
+      padding: 70px 0 50px;
+      text-align: center;
+    }
+
+    .hero-label {
+      display: inline-block;
+      background-color: var(--gold);
+      color: var(--dark-blue);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 4px 14px;
+      border-radius: 3px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--gray);
+      max-width: 550px;
+      margin: 0 auto 28px;
+    }
+
+    /* --- FEATURED SECTION --- */
+    .featured-section {
+      padding: 50px 0;
+    }
+
+    .featured-main {
+      background-color: var(--mid-blue);
+      border: 1px solid var(--light-blue);
+      border-radius: 6px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 30px;
+    }
+
+    .featured-main img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .featured-main-body {
+      padding: 35px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-main-body h2 {
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+
+    .featured-main-body h2 a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .featured-main-body h2 a:hover {
+      color: var(--gold);
+    }
+
+    .featured-main-body p {
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+
+    /* --- TRENDING SECTION --- */
+    .trending-section {
+      padding: 50px 0;
+      background-color: var(--mid-blue);
+    }
+
+    .trending-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .trending-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .trending-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--light-blue);
+    }
+
+    .trending-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--gold);
+      min-width: 40px;
+      opacity: 0.6;
+    }
+
+    .trending-item h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .trending-item h4 a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .trending-item h4 a:hover {
+      color: var(--gold);
+    }
+
+    .trending-item span {
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    /* --- ARTICLE LISTS SECTION --- */
+    .articles-section {
+      padding: 50px 0;
+    }
+
+    @media (max-width: 700px) {
+      .featured-main {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">PULSE<span>MAG</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="feature.html">Feature Stories</a></li>
+          <li><a href="entertainment.html">Entertainment</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li><a href="team.html">Editorial Team</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-label">Welcome to Pulse Magazine</div>
+      <h1>Your Source for Lifestyle, Culture &amp; Technology</h1>
+      <p>Explore in-depth articles, feature stories, and multimedia content from our editorial team.</p>
+      <a href="feature.html" class="btn btn-gold">Read Feature Stories</a>
+    </div>
+  </section>
+
+  <!-- FEATURED STORY -->
+  <section class="featured-section">
+    <div class="container">
+      <h2 class="section-title">Featured Story</h2>
+
+      <div class="featured-main">
+        <img src="images/home.jpg" alt="Featured Story" />
+        <div class="featured-main-body">
+          <span class="card-category">Lifestyle</span>
+          <h2><a href="feature.html">How Modern Culture is Reshaping the Way We Live and Work</a></h2>
+          <p>From remote work to digital communities, our world is changing faster than ever. We explore what these shifts mean for the generations of today.</p>
+          <a href="feature.html" class="btn btn-outline">Read More</a>
+        </div>
+      </div>
+
+
+  <!-- TRENDING STORIES -->
+  <section class="trending-section">
+    <div class="trending-inner">
+      <h2 class="section-title">Trending Stories</h2>
+      <div class="trending-list">
+        <div class="trending-item">
+          <span class="trending-number">01</span>
+          <div>
+            <h4><a href="entertainment.html">Top 10 Films to Watch This Season</a></h4>
+            <span>Entertainment &nbsp;|&nbsp; 4,200 views</span>
+          </div>
+        </div>
+        <div class="trending-item">
+          <span class="trending-number">02</span>
+          <div>
+            <h4><a href="feature.html">How Social Media is Changing Journalism</a></h4>
+            <span>Technology &nbsp;|&nbsp; 3,800 views</span>
+          </div>
+        </div>
+        <div class="trending-item">
+          <span class="trending-number">03</span>
+          <div>
+            <h4><a href="entertainment.html">Rising Stars: Interviews With New Artists</a></h4>
+            <span>Culture &nbsp;|&nbsp; 3,100 views</span>
+          </div>
+        </div>
+        <div class="trending-item">
+          <span class="trending-number">04</span>
+          <div>
+            <h4><a href="multimedia.html">Video: Inside a Recording Studio Session</a></h4>
+            <span>Multimedia &nbsp;|&nbsp; 2,900 views</span>
+          </div>
+        </div>
+        <div class="trending-item">
+          <span class="trending-number">05</span>
+          <div>
+            <h4><a href="feature.html">The Future of Education in Southern Africa</a></h4>
+            <span>Lifestyle &nbsp;|&nbsp; 2,500 views</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="feature.html">Feature Stories</a>
+        <a href="entertainment.html">Entertainment</a>
+        <a href="multimedia.html">Multimedia</a>
+        <a href="team.html">Editorial Team</a>
+      </div>
+      <p>&copy; 2026 Pulse Magazine. All rights reserved. | Limkokwing University of Creative Technology</p>
+    </div>
+  </footer>
+
+</body>
+</html>
